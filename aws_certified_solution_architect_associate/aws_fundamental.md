@@ -10,7 +10,7 @@ A data center is a building filled with servers in halls.
 ### Regions
 A **Region** is a geographical area (i.e US East (Northern Virginia)) with 2 or more AZ within 100km from each other.
 ### Edge Locations
-An Edge Location is an endpoint for AWS that is used for caching content. 
+An Edge Location is an endpoint for AWS that is used for caching content. Thos consists of CloudFront, Amazon's content delivery network (CDN).
 
 ---
 
@@ -55,6 +55,23 @@ Way to our compute, storage and databases to communicate:
 - AWS Global Accelerator
 ---
 ## What is the well-architected framework?
-
+6 pillars of the well-architected framework:
+- Operational Excellence
+- performance Efficiency
+- Security
+- Cost Optimization
+- Reliability
+- Sustainability
 ---
 ## AWS Fundamentals exam tips
+1. Know what are:
+   - Region
+   - AZ
+   - Edge Locations
+
+2. Know the shared responsibility model (can you do it yourself or not ?)
+3. Know the key services by categories:
+   - Compute: EC2, Lambda, Elsatic Beanstalk
+   - Storage: S3, EBS, EFS, FSx, Storage Gateway
+   - Databases: RDS, DynamoDB, Redshift
+   - Networking:  VPCs, Direct Connect, Route 53, API Gateway, AWS Global Accelerator
