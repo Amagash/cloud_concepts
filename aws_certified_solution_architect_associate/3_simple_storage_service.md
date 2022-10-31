@@ -40,10 +40,15 @@ S3 standard:
 - Server-side encryption: set default encryption on a bucket to encrypt al new objects
 - Access Control Lists (ACLs): Define which AWS accounts of groups are granted access and the type of access. You can attach S3 ACLs to individual objects within a bucket.
 - Bucket Policies: S3 bucket policies specify what actions are allowed or denied
-### Consistency Model
-### Exam Tips
 ---
 ## Securing your Bucket with S3 Block public access
+### Object ACLs VS. Bucket policies
+Object ACLs work on an individual object level whereas Bucket Policies work on an entire bucket level. 
+### Exam tips
+- Buckets are private by default. To make it public you have to allow public access on both the bucket and its objects
+- Object ACLs: You can make individual objects public using object ACLs
+- Bucket Policies: You can make entire buckets public using bucket policies
+- HTTP status code: When you upload an object to S3 successfully, you will receive an HTTP 200 code?
 ---
 ## Hosting a Static Website Using S3
 ---
