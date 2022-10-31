@@ -51,6 +51,12 @@ Object ACLs work on an individual object level whereas Bucket Policies work on a
 - HTTP status code: When you upload an object to S3 successfully, you will receive an HTTP 200 code?
 ---
 ## Hosting a Static Website Using S3
+
+You can use S3 to host static websites, such as .html sites.
+- Bucket policies: Make entire buckets public using bucket policies.
+- Static Content: Use S3 to host static content only (not dynamic).
+- Automatic Scaling: S3 scales automatically with demand.
+
 ---
 ## Versioning Objects in S3
 ---
