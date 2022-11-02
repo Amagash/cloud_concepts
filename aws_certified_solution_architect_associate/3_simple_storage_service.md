@@ -59,8 +59,49 @@ You can use S3 to host static websites, such as .html sites.
 
 ---
 ## Versioning Objects in S3
+### Advantages of versioning
+- All versions: you can store all versions of an object
+- Backup: Can be great backup tool
+- Cannot be disabled: once enabled, it cannot be disabled, only suspended
+- lifecycle rules: can be integrated with lifecycle rules
+- Supports MFA
 ---
 ## S3 Storage classes
+### S3 stantard
+- Built for availability: 99.95 - 99.99% service availability
+- Designed for 99.999999999 (11 decimal places) durability for data stored in S3
+- Data stored redundantly across multiple decices in at least 3 AZs
+- Designes for frequent access
+- Suitable for most workloads (websites, content distribution, mobile and gaming, and big data analytics)
+### S3 Standard-Infrequent Access (S3 Standard-IA)
+- Rapid access: used for data that is accessed less frequently but requires rapid access when needed. 
+- Pay to access the data: low per-GB storage price and a per-GB retrieval fee
+- Use case: Great for long term storage, backups, and as a data store for disaster recovery files
+### S3 One Zone-Infrequent Access
+Like Standard-IA but data is stored redundantly within a single AZ. This cost 20% less and is great for long-lived, infrequently accessed, non critical data.
+### S3 Intelligent-Tiering
+Automatically moves data to the most cost-effective tier based on how frequently you access each object.
+### 3 Glacier Options
+Use for archiving data:
+- Glacier Instant Retrieval: long-term data archiving with instant retrieval
+- Glacier flexible retrieval: can be minutes up to 12h to retrieve.
+- Glacier Deep Archive: cheapest solution but takes from 12 hours to 48 hours to retrieve.
+### Performance across S3
+### Storage Costs
+### Exam Tips
+|Storage|Availability and durability|AZ(s)|Use Case|
+|---|---|---|---|
+|S3 Standard|99.99% Availability 11 9's Durability|>=3|Suitable for most workloads (e.g., websites, content distribution, mobile and gaming applications, and big data analytics)|
+|S3 Standard IA|99.9% Availability 11 9's Durability|>=3|Long-term, infrequently accessed critical data (e.g., backups, data store for disaster receovery files, etc.)|
+|S3 One Zone Infrequent Access|99.5% Availability 11 9's Durability|1|Long term, infrequently accessed, non-critical data|
+|S3 Intelligent Tiering|99.9% Availability 11 9's Durability|>=3|Unknown or unpredictable access pattern|
+|S3 Glacier instant retrieval|99.99% Availability 11 9's Durability|>=3|Provides long term data archiving with instant retrieval time for your data|
+|S3 Glacier flexible retrieval|99.99% Availability 11 9's Durability|>=3|Ideal storage class for archive data that does not require immediate access but needs the flexibility to retrieve large sets of data at no cost, such as backup or disaster recovery use cases. Can be minutes up to 12 hours|
+|S3 Glacier Deep Archive|99.99% Availability 11 9's Durability|>=3|Cheapest storage class and designed for customer that retain data sets for 7-10 years or longer to meet customer needs and regulatory compliance requirements. The standard retrieval is 12h and the bulk retrieval time is 48 hours.|
+
+
+
+
 ---
 ## Lifecycle Management with S3
 ---
