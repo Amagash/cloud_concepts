@@ -98,14 +98,19 @@ Use for archiving data:
 |S3 Glacier instant retrieval|99.99% Availability 11 9's Durability|>=3|Provides long term data archiving with instant retrieval time for your data|
 |S3 Glacier flexible retrieval|99.99% Availability 11 9's Durability|>=3|Ideal storage class for archive data that does not require immediate access but needs the flexibility to retrieve large sets of data at no cost, such as backup or disaster recovery use cases. Can be minutes up to 12 hours|
 |S3 Glacier Deep Archive|99.99% Availability 11 9's Durability|>=3|Cheapest storage class and designed for customer that retain data sets for 7-10 years or longer to meet customer needs and regulatory compliance requirements. The standard retrieval is 12h and the bulk retrieval time is 48 hours.|
-
-
-
-
 ---
 ## Lifecycle Management with S3
+- Automated moving you objects between different storage tiers
+- Can be used in conjunction with versioning
+- Can be applied to current versions and previous versions
 ---
 ## S3 Object lock and glacier vault lock
+- Use S3 Object lock to store objects using a write once, read many (WORM) model.
+- Object lock can be on individual objects of applied across the bucket as a whole.
+- Object lock comes in two modes: 
+  - Governance mode: users can't overwrite or delete an object version or alter its lock unless they have special permissions.
+  - Compliance mode: a protected object version can't be overwritten or deleted by any user, including the root user in your AWS account.
+- S3 Glacier vault lock allows you to easily deploy and enforce compliance controls for individual S3 Glacier vault with a vault lock policy. You can specify controls, such as WORM, in a vault lock policy and lock the policy from future edits. Once locked, the policy can no longer be changed.
 ---
 ## Encrypting S3 objects
 ---
@@ -113,4 +118,34 @@ Use for archiving data:
 ---
 ## Backing up data with S3 replication
 ---
-## SE Exam Tips
+## S3 Exam Tips
+- Object based storage
+- Object up to 5TB
+- Not OS or DB Storage
+- Unlimited Storage: The total volume of data and the number of objects is unlimited.
+
+Files are stored in buckets : 
+- S3 is a universal namespace
+- It comes with a URL
+- Successful upload will generate HTTP 200 status code
+- Are private by default
+- You can make individual objects public using ACL (Access Control Lists)
+- You can make entire buckets public using policies
+
+Hosting a statics website:
+- You can use S3 to host static websites
+- S3 scales automatically with demand
+
+Versioning Objects:
+- All versions
+- Backup 
+- Cannot be disabled
+- Lifecycle rules
+- Support MFA
+
+Know the 6 different storage tiers
+
+Lifecycle management:
+
+
+S3 object lock and glacier vaults lock:
