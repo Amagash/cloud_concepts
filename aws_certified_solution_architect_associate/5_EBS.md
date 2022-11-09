@@ -98,3 +98,8 @@ Choose between EFS, FSx for Windows, or FSx for Lustre:
 - Instance Store: Ephemeral storage for EC2 instances
 - FSx for Windows: File storage for Windows instances. Centralized storage solution across multiple AZs.
 - Knowing the different use cases for storage will gain you valuable points in the exam.
+
+## AWS Backup
+- Consolidation: Use AWS Backup to back up AWS services, such as EC2, EBS, EFS, Amazon FSx for Lustre, Amazon FSx for Windows File Server, and AWS Storage Gateway.
+- Organizations: You can use AWS Organizations in conjunction with AWS Backup to backup your different AWS services across multiple AWS account. 
+- Benefits: Backup gives you centralized control, letting you automate your backups and define lifecycle policies for your data. You get better compliance, as you can enforce your backup policies, ensure your backups are encrypted, and audit them once complete.
