@@ -51,3 +51,17 @@ AMI = a blueprint for an EC2 instance
 - Instance store volumes cannot be stopped. If the underlying hosts fails, you will lose your data
 - By default, both root volumes will be deleted on termination. However, with EBS volumes, you can tell AWS to keep the root device volume
 - EBS-backed instances can be stopped. You will not loose the data on this instance if it is stopped.
+
+## Protecting EBS volumes with encryption
+- Data at rest is encrypted inside the volume
+- All the data in flight moving between the instance and the volume is encrypted
+- All snapshots are encrypted
+- All volumes created from the snapshots are encrypted
+
+To encrypt volumes:
+1. Create a snapshot of the unencrypted root device volume.
+2. Create a copy of the snapshot and select the encrypt option.
+3. Create an AMI from the encrypted snapshot.
+4. Use that AMI to launch new encrypted instances. 
+
+## What you need to know about EC2 Hibernation
