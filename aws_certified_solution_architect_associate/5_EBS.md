@@ -82,3 +82,12 @@ To encrypt volumes:
 - Read-after-write consistency
 
 If you have a scenario-based question around highly scalable shared storage using NFS, think EFS. 
+
+## FSx Overview
+Choose between EFS, FSx for Windows, or FSx for Lustre:
+1. EFS: when you need distributed, highly resilient storage for linux instances and linus-based applications
+2. Amazon FSx for Windows: When you need centralized storage for Windows-based applications, such as Sharepoint, Microsoft SQL Server, Workspaces, IIS WebServer, or any other native Microsoft application
+3. Amazon FSx for Lustre: When you need high-speed, high-capacity distributed storage, This will be for applications that do high performance computing (HPC), financial modeling, etc. Remember that FSx for Lustre can store data directly on S3.
+
+## Storage options
+- S3
