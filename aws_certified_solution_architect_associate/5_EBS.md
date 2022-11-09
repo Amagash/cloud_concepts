@@ -43,9 +43,10 @@ Highly available and scalable storage volumes you can attach to an EC2 instance:
 - The first snapshot will take some time to create. For consistent snapshots, stop the instance and detach the volume.
 - You can share snapshots between AWS accounts as well as between regions, but fist you need to copy that snapshot to target region
 - You can resize EBS volumes on the fly as well as changing the volume types
+- Snapshots are stored in S3
 
 ## AMIs: EBS vs Instance store
-AMI = a blueprint for an EC2 instance
+AMI (Amazon Machine Image) = a blueprint for an EC2 instance
 - Instance store volumes are sometimes called ephemeral storage
 - You can reboot both EBS and instance store volumes you will not lose you data.
 - Instance store volumes cannot be stopped. If the underlying hosts fails, you will lose your data
@@ -65,10 +66,10 @@ To encrypt volumes:
 4. Use that AMI to launch new encrypted instances. 
 
 ## What you need to know about EC2 Hibernation
-- EC2 Hibernation preserves the in-memoru RAM on persistent storage (EBS)
+- EC2 Hibernation preserves the in-memory RAM on persistent storage (EBS)
 - Much faster to boot up because you do not need to reload the operating system.
 - Instance RAM must be less than 150 GB
-- Instance families include C3, C4, C5, M3, M4, M5, R3, R4 and R5
+- Only certain type of EC2 instances support hibernation: Instance families include C3, C4, C5, M3, M4, M5, R3, R4 and R5
 - Available for Windows, Amazon Linux 2 AMI and Ubuntu.
 - Instances can't be hibernated for more than 60 days
 - Available for on-demand instances and reserved instances.
