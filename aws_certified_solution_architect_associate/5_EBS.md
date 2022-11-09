@@ -71,3 +71,14 @@ To encrypt volumes:
 - Instance families include C3, C4, C5, M3, M4, M5, R3, R4 and R5
 - Available for Windows, Amazon Linux 2 AMI and Ubuntu.
 - Instances can't be hibernated for more than 60 days
+- Available for on-demand instances and reserved instances.
+
+## EFS Overview
+- Supports the network file system version 4 (NFSv4) protocol
+- Can support thousands of concurrent NFS connections
+- Only pay for the storage you use (no pre-provisioning required)
+- Data is stored across multiple AZs within a region
+- Can scale up to petabytes
+- Read-after-write consistency
+
+If you have a scenario-based question around highly scalable shared storage using NFS, think EFS. 
