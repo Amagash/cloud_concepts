@@ -65,3 +65,9 @@ To encrypt volumes:
 4. Use that AMI to launch new encrypted instances. 
 
 ## What you need to know about EC2 Hibernation
+- EC2 Hibernation preserves the in-memoru RAM on persistent storage (EBS)
+- Much faster to boot up because you do not need to reload the operating system.
+- Instance RAM must be less than 150 GB
+- Instance families include C3, C4, C5, M3, M4, M5, R3, R4 and R5
+- Available for Windows, Amazon Linux 2 AMI and Ubuntu.
+- Instances can't be hibernated for more than 60 days
