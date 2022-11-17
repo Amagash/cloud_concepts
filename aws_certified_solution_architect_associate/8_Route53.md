@@ -1,4 +1,9 @@
 # Route 53 Overview
+Route 53 is a DNS service. It allows you to:
+- Register domain names
+- Host both public and private zones
+- Set records
+- Set Routing policies
 ## What is DNS
 Domain Name System is the phonebook of the internet. It maps human readable domain names (i.e google.com) to machine readable IP adresses (i.e http://82.124.53.1)
 ## IPv4 VS IPv6
@@ -49,3 +54,5 @@ Geolocation routing lets you choose where your traffic will be sent based on the
 Route traffic based on the geographic location of your user and resources. You can also specify a biais.
 ### Latency routing policy
 Route traffic based on the lowest network latency for your end user.
+### Multivalue answer routing policy
+Returns multiple values such as IP addresses for you web servers in response to DNS queries. It can be useful to return only healthy resources. It's like a simple routing but with health check on each record.
