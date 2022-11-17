@@ -35,3 +35,17 @@ Used to map one domain name to another. For example you might want those address
 
 ## Alias Records
 Used to map resources within AWS
+
+## Routing policies
+### Simple routing policy
+Only one record with multiple IP addresses. The IP returned is chosen randomly.
+### Weighted routing policy
+Split the traffic based on different weight assigned (i.e 10% to us-east-1 and 90% to eu-west-1). Health check on individual record sets allows to remove records from route 53 if unhealthy.
+### Failover routing policy
+When a failure is detected in the active server, the traffic is redirected to the passive server.
+### Geolocation routing policy
+Geolocation routing lets you choose where your traffic will be sent based on the geographic location of the users (i.e based on the location from which DNS queries originate).
+### Geoproximity routing policy
+Route traffic based on the geographic location of your user and resources. You can also specify a biais.
+### Latency routing policy
+Route traffic based on the lowest network latency for your end user.
