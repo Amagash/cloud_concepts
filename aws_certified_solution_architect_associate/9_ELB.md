@@ -20,3 +20,14 @@ You must define a default rule for each listener and you can optionally define a
 Each target group routes requests to one or more registered targets, such as EC2 instances, using the protocol and port number you specify.
 ### Path-Based Routing
 You can do intelligent routing based on your paths.
+
+## Network load Balancer
+Operates at layer 4 of the OSI and can handle millions of requests per second.
+If no instance is healthy it'll send a request to all instances in the hope one responds.
+
+## Classic Load Balancer
+### Sticky session
+A Classic load balancer route each request independently to the resgistered EC2 instance with the smallest load. Sticky session allow you to bind a user's session to a specific EC2 instance. It is useful for storing information locally to that instance.
+
+## Deregistration delay
+It allows load balancer to keep existing connections open for a set period of time even if the instance is re-registered or unhealthy. This allow continuity but if you want your load balancer to immediately close connections you can disable deregistration.
