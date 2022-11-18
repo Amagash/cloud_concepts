@@ -9,6 +9,7 @@ There are 3 different types of load balancer:
 The status of the instances that are healthy at the time of the health check is InService otherwise the status is OutOfService. The load balancer performs health checks on all registered instances. It then routes requests only to the healthy instances. The routing resumes to instances when it has been restored to the healthy state.
 
 ## Application Load Balancer
+![ELB_diagram](img/ELB_diagram.png)
 ### Layer 7 load Balancing
 An application Load Balancer functions at the Application layer -- the 7th layer of the Open Systems Interconnection (OSI) model.
 ### Listeners
