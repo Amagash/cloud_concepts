@@ -1,0 +1,5 @@
+- What is short and long polling?
+- What is a VPC
+- What is the difference between IPv4 and IPv6
+- Explain Auto scaling
+- 
