@@ -28,8 +28,30 @@ Messages that fail to be treated are redirected to a DLQ instead of staying in t
 
 # Simple Notification Service (SNS)
 SNS is a fully managed massaging service for both application-to-application (A2A) and application-to-person (A2P) communication (i.e send emails or text messages to users).
+## Push-based messaging
+Instead of the mailman posting the letter in your mailbox, it's the chronofresh delivery to your home and you need to be ready to receive the message when it arrives.
+
+SNS delivers messages on our behalf to endpoints subscribed to it. 
+- Subscribers can be:
+  - Kinesis Data Firehose
+  - SQS
+  - Lambda
+  - email
+  - HTTPS
+  - SMS
+  - Platform application endpoint
+- Message size: up to 256KB in any text format
+- DLQ support
+- FIFO or Standard
+- Encryption
+- Access policy
+
 # API Gateway
-API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
+API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. It's a safe "front door" on your application. It allows the internet to talk to your resources in a secure way.
+- Security: allow you to easily protect your endpoints by attaching a Web application Firewall (WAF) which acts kind of like a security group on steriods.
+- Stop Abuse: You can set up limiting for DDoS protection.
+- Ease of Use: Easy to set an API endpoint
+
 
 # Exam tips
 - Never tightly couple, always loosely couple
@@ -37,3 +59,5 @@ API Gateway is a fully managed service that makes it easy for developers to crea
 - Duplication problem => SQS FIFO
 - Performance => Standard SQS
 - Cost effective => Standard SQS
+- Push/Alert => CloudWatch sets treshold and push alert with SNS
+- Subscribers => can be email, HTTPS, SNS, lambda, SQS, kinesis, SMS...
