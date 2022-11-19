@@ -50,3 +50,10 @@ Important for high availability applications
 - Vertical scaling
 - Multi AZ always on
 - Whenever possible use Aurora
+- Predictable workloads => Provisionned DynamoDB
+- Sporadic workloads => On demand dynamoDB
+- Auto scaling is only for EC2. No other service can be scaled using auto scaling.
+- Favor solutions that are predictive rather than reactive
+- Reduce Build times by putting everything in an AMI rather than using user data.
+- Spread out your auto scaling groups over multiple AZs.
+- ELBs are essentials. Make sure to pick a solution that has an ELB with health checks.
