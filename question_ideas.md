@@ -2,4 +2,4 @@
 - What is a VPC
 - What is the difference between IPv4 and IPv6
 - Explain Auto scaling
-- 
+- Why do I need the create the DLQ before the principal SQS?
